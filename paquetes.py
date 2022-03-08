@@ -1,9 +1,8 @@
 import pandas as pd
 try:
-  paquetes = pd.read_excel("paquetes.xlsx")
+  paquetes = pd.read_excel("ProyectoAprendizajeAutomatico/paquetes.xlsx")
   paquetes.to_csv("paquetes.csv", index = False)
-except:
-  print("Hubo un error cargando la lista de paquetes")
+except Exception as e:
+  print(e)
 else:
   print("La lista de paquetes se cargo correctamente")
-  print(rows)
